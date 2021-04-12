@@ -63,7 +63,7 @@ class Elementaree:
 
         return cook_time
 
-    def get_structure(self, link):
+    def get_dish_page_code(self, link):
         """
         Переходим на отдельную страницу блюда и получаем её код
         """
@@ -128,7 +128,7 @@ class Elementaree:
                             dish_person = dish_container.find('span', {'class': 'portions__count___ikw4L'}).text
                             dish_mass = dish_container.find('span', {'class': 'portions__size___1SxUs'}).text[0:-1]
 
-                            dish_page_code = self.get_structure(dish_link)
+                            dish_page_code = self.get_dish_page_code(dish_link)
 
                             dish_ingrid = dish_page_code.find('div', {'class': 'dish-details__ingredients-text___3Zcw9'}).text
                             dish_kbzhu = self.get_kbzhu(dish_page_code)
