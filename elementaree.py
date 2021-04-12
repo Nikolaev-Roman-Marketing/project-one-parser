@@ -111,7 +111,8 @@ class Elementaree:
             if category_name_container is not None:
 
                 category_name = category_name_container.text
-
+                
+                # эта категория нам не нужна
                 if category_name != "Приятные мелочи":
 
                     # итерируемся по всем карточкам блюд
