@@ -29,7 +29,7 @@ class Connector:
         
         last_actual_data = pd.read_sql(f'SELECT week, number, competitor '
                                        f'FROM {self.table} '
-                                       f'ORDER BY id '
+                                       f'ORDER BY id DESC '
                                        f'LIMIT 1000 ',
                                        self.conn)
 
